@@ -86,10 +86,17 @@ function page() {
 
                         <div className="mt-8 space-y-4">
                             <p className="text-gray-700">
-                                📧 <span className="font-medium">Email:</span> yourmail@example.com
+                                📧 <span className="font-medium">Email:</span>{" "}
+                                <a
+                                    href="mailto:khandaymudabir@gmail.com"
+                                    className="text-indigo-600 hover:underline"
+                                >
+                                    khandaymudabir@gmail.com
+                                </a>
                             </p>
+
                             <p className="text-gray-700">
-                                📍 <span className="font-medium">Location:</span> India
+                                📍 <span className="font-medium">Location:</span> Kashmir
                             </p>
                         </div>
                     </div>
