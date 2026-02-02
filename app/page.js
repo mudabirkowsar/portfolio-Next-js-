@@ -1,5 +1,7 @@
 import Image from "next/image";
 import SkillsSection from "./components/SkillsSection";
+import Education from "./components/Education";
+import ExtraActivities from "./components/ExtraActivities";
 
 export default function Home() {
   return (
@@ -42,12 +44,12 @@ export default function Home() {
           {/* Right Image */}
           <div className="flex justify-center">
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl">
-              <Image
-                src="/mudabir.jpg" // put your image in public folder
+              <img
+                src="https://www.citypng.com/public/uploads/preview/mickey-mouse-cartoon-character-png-701751694870917llwgrbfvv1.png" // put your image in public folder
                 alt="Mudabir Profile"
-                fill
+                // fill
                 className="object-cover"
-                priority
+                // priority
               />
             </div>
           </div>
@@ -56,6 +58,8 @@ export default function Home() {
       </main>
 
       <SkillsSection />
+      <Education />
+      <ExtraActivities />
     </>
   );
 }

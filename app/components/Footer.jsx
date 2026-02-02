@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
@@ -21,24 +22,24 @@ function Footer() {
           </h3>
           <ul className="space-y-2">
             <li>
-              <a href="#home" className="hover:text-white transition">
+              <Link href="/" className="hover:text-white transition">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#projects" className="hover:text-white transition">
+              <Link href="/projects" className="hover:text-white transition">
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" className="hover:text-white transition">
+              <Link href="/aboutme" className="hover:text-white transition">
                 About Me
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="hover:text-white transition">
+              <Link href="/contact" className="hover:text-white transition">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

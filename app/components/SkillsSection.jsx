@@ -1,51 +1,93 @@
 import React from "react";
+import {
+    FaHtml5,
+    FaCss3Alt,
+    FaJs,
+    FaReact
+} from "react-icons/fa";
 
 function SkillsSection() {
     const skills = [
-        { name: "HTML", level: 90 },
-        { name: "CSS", level: 85 },
-        { name: "JavaScript", level: 80 },
-        { name: "React", level: 85 },
-        { name: "React Native", level: 75 },
+        {
+            name: "HTML",
+            level: "Expert",
+            icon: <FaHtml5 />,
+            color: "text-orange-500"
+        },
+        {
+            name: "CSS",
+            level: "Expert",
+            icon: <FaCss3Alt />,
+            color: "text-blue-500"
+        },
+        {
+            name: "JavaScript",
+            level: "Advanced",
+            icon: <FaJs />,
+            color: "text-yellow-400"
+        },
+        {
+            name: "React",
+            level: "Advanced",
+            icon: <FaReact />,
+            color: "text-cyan-400"
+        },
+        {
+            name: "React Native",
+            level: "Intermediate",
+            icon: <FaReact />,
+            color: "text-cyan-500"
+        },
     ];
 
     return (
         <section
             id="skills"
-            className="py-0 bg-gradient-to-b from-white to-gray-50"
+            className="py-24 bg-gradient-to-b from-white via-gray-50 to-white"
         >
-            <div className="max-w-5xl mx-auto px-6">
+            <div className="max-w-6xl mx-auto px-6">
 
                 {/* Heading */}
-                <div className="text-center mb-14">
+                <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-900">
-                        Skills & Expertise
+                        Skills
                     </h2>
-                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                        A snapshot of the technologies I use to build fast,
-                        scalable, and user-friendly applications.
+                    <p className="mt-4 text-gray-600 max-w-xl mx-auto">
+                        Tools and technologies I use to craft high-quality
+                        digital experiences.
                     </p>
                 </div>
 
-                {/* Skills Card */}
-                <div className="bg-white rounded-2xl shadow-lg p-8 space-y-8">
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                     {skills.map((skill, index) => (
-                        <div key={index}>
-                            <div className="flex justify-between items-center mb-2">
-                                <span className="text-lg font-semibold text-gray-800">
-                                    {skill.name}
-                                </span>
-                                <span className="text-sm font-medium text-indigo-600">
-                                    {skill.level}%
-                                </span>
+                        <div
+                            key={index}
+                            className="group relative bg-white/70 backdrop-blur-md
+                            rounded-3xl p-10 text-center border border-gray-200
+                            shadow-sm hover:shadow-2xl transition-all duration-300"
+                        >
+                            {/* Icon */}
+                            <div
+                                className={`mx-auto w-20 h-20 flex items-center justify-center
+                                rounded-2xl bg-gray-100 mb-6 text-5xl
+                                ${skill.color}
+                                group-hover:scale-110 transition`}
+                            >
+                                {skill.icon}
                             </div>
 
-                            <div className="w-full h-4 bg-gray-200 rounded-full overflow-hidden">
-                                <div
-                                    className="h-full bg-gradient-to-r from-indigo-500 to-indigo-700 rounded-full transition-all duration-700 ease-out"
-                                    style={{ width: `${skill.level}%` }}
-                                />
-                            </div>
+                            {/* Skill Name */}
+                            <h3 className="text-xl font-semibold text-gray-900">
+                                {skill.name}
+                            </h3>
+
+                            {/* Level */}
+                            <span className="inline-block mt-3 px-4 py-1.5
+                            rounded-full text-sm font-medium
+                            bg-gray-900 text-white">
+                                {skill.level}
+                            </span>
                         </div>
                     ))}
                 </div>
