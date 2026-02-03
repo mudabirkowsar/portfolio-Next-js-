@@ -1,5 +1,10 @@
 import React from "react";
 
+export const metadata = {
+    title: "About Me - Mudabir's Portfolio",
+    description: "Learn more about Mudabir, a passionate Full Stack Developer.",
+};
+
 function page() {
     return (
         <section className="min-h-screen bg-white py-20">

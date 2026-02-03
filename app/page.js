@@ -3,6 +3,11 @@ import SkillsSection from "./components/SkillsSection";
 import Education from "./components/Education";
 import ExtraActivities from "./components/ExtraActivities";
 
+export const metadata = {
+  title: "Home - Mudabir's Portfolio",
+  description: "Welcome to Mudabir's personal portfolio website.",
+};
+
 export default function Home() {
   return (
     <>
@@ -49,7 +54,7 @@ export default function Home() {
                 alt="Mudabir Profile"
                 // fill
                 className="object-cover"
-                // priority
+              // priority
               />
             </div>
           </div>

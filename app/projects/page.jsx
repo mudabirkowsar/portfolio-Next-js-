@@ -1,6 +1,12 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+export const metadata= {
+  title: "Projects - My Portfolio",
+  description:
+    "Explore a curated selection of projects showcasing my skills in modern web development technologies and frameworks.",
+};
+
 function page() {
   const projects = [
     {

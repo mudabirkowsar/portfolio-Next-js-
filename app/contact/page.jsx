@@ -1,5 +1,11 @@
 import React from "react";
 
+export const metadata = {
+    title: "Contact - My Portfolio",
+    description:
+        "Get in touch with me for collaborations, inquiries, or just to say hello. I'd love to hear from you!",
+}
+
 function page() {
     return (
         <section className="min-h-screen bg-gray-50 py-20">
@@ -20,17 +26,19 @@ function page() {
 
                     {/* Left: Contact Form */}
                     <div className="bg-white p-8 rounded-2xl shadow-lg">
-                        <form className="space-y-6">
+                        <form className="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="fa9b2722-8eee-4110-89bb-b0005d112066" />
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">
                                     Name
                                 </label>
                                 <input
                                     type="text"
+                                    name="name"
                                     placeholder="Your name"
                                     className="mt-2 w-full px-4 py-3 border border-gray-300 rounded-lg 
              placeholder-gray-700 
-             focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+             focus:ring-2 focus:ring-indigo-500 focus:outline-none text-black"
                                 />
 
                             </div>
@@ -41,8 +49,9 @@ function page() {
                                 </label>
                                 <input
                                     type="email"
+                                    name="email"
                                     placeholder="you@example.com"
-                                    className="mt-2 w-full px-4 py-3 border placeholder-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                                    className="mt-2 w-full px-4 py-3 border placeholder-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-black"
                                 />
                             </div>
 
@@ -52,8 +61,9 @@ function page() {
                                 </label>
                                 <textarea
                                     rows="5"
+                                    name="message"
                                     placeholder="Write your message..."
-                                    className="mt-2 w-full px-4 py-3 border placeholder-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                                    className="mt-2 w-full px-4 py-3 border placeholder-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-black"
                                 />
                             </div>
 
